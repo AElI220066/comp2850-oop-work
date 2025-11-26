@@ -9,6 +9,7 @@ fun isValid(word: String): Boolean {
         return false
     }
 }
+
 // reads file and puts to mutablelist
 fun readWordList(filename: String): MutableList<String>{
 
@@ -22,6 +23,7 @@ fun readWordList(filename: String): MutableList<String>{
     }
 
 }
+
 fun pickRandomWord(words: MutableList<String>): String {
 
     val word = words.random()
