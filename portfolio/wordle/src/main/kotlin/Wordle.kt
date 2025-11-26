@@ -22,8 +22,8 @@ fun readWordList(filename: String): MutableList<String>{
     }
 
 }
-//picks a random word from mutable list
 fun pickRandomWord(words: MutableList<String>): String {
+
     val word = words.random()
     words.remove(word)
     return word
@@ -58,9 +58,8 @@ fun evaluateGuess(guess: String, target: String): List<Int> {
         }
     }
     return list
-
-
 }
+
 // takes guess and list, and returns result ? or letter
 fun displayGuess(guess: String, matches: List<Int>) {
     val g = guess
