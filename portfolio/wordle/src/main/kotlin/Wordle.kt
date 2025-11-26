@@ -22,6 +22,7 @@ fun readWordList(filename: String): MutableList<String>{
         return words
     }
 }
+
 fun pickRandomWord(words: MutableList<String>): String {
 
     val word = words.random()
