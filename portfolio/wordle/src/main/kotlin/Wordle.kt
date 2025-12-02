@@ -1,5 +1,7 @@
 import java.io.File
+
 const val VALID = 5
+
 const val WORDLOOP = 4
 // isValid function checks that word length is 5 and string is not int
 fun isValid(word: String): Boolean {
