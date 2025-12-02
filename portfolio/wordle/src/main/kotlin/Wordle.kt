@@ -16,7 +16,7 @@ fun isValid(word: String): Boolean {
 // reads file and puts to mutablelist
 
 fun readWordList(filename: String): MutableList<String> {
-   val file = File(filename)
+    val file = File(filename)
     if (file.exists() == false) {
         return mutableListOf("No")
     } else {
@@ -32,10 +32,10 @@ fun pickRandomWord(words: MutableList<String>): String {
     return word
 }
 
-//prints the num of attempt and takes the guess or asks to try again if word is not valid
+// prints the num of attempt and takes the guess or asks to try again if word is not valid
 
 fun obtainGuess(attempt: Int): String {
-    val n = "Attempt $attempt:"
+    val n = "\nAttempt $attempt:"
     println(n)
     var nu = readln()
     while (isValid(nu) == false) {
