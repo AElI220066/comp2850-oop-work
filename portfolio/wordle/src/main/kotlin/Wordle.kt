@@ -4,6 +4,7 @@ const val VALID = 5
 
 const val WORDLOOP = 4
 // isValid function checks that word length is 5 and string is not int
+
 fun isValid(word: String): Boolean {
     if (word.length == VALID && word.toIntOrNull() == null) {
         return true
@@ -13,8 +14,8 @@ fun isValid(word: String): Boolean {
 }
 
 // reads file and puts to mutablelist
-fun readWordList(filename: String): MutableList<String>{
 
+fun readWordList(filename: String): MutableList<String> {
    val file = File(filename)
     if (file.exists() == false) {
         return mutableListOf("No")
@@ -26,30 +27,26 @@ fun readWordList(filename: String): MutableList<String>{
 }
 
 fun pickRandomWord(words: MutableList<String>): String {
-
     val word = words.random()
     words.remove(word)
     return word
 }
+
 //prints the num of attempt and takes the guess or asks to try again if word is not valid
+
 fun obtainGuess(attempt: Int): String {
     val n = "Attempt $attempt:"
     println(n)
     var nu = readln()
-
-
-
     while (isValid(nu) == false) {
         println("Try again, $n")
         nu = readln()
     }
-
     return nu
 }
 
 // takes both guess and random word, and retuns list of integers
 fun evaluateGuess(guess: String, target: String): List<Int> {
-
     val g = guess.lowercase()
     val t = target.lowercase()
     val list = mutableListOf<Int>()

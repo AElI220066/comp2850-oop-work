@@ -1,4 +1,5 @@
 const val FINISH = 10
+
 fun main() {
     val words = readWordList("data/words.txt")
     if (mutableListOf<String>("No") == words) {
